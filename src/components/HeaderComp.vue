@@ -21,7 +21,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 400px;
+  height: 360px;
 }
 
 .header-text {

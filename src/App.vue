@@ -2,12 +2,12 @@
   <div class="body" @mousemove="handleMouseMove">
     <div class="light" :style="{ top: `${lightPosition.y}px`, left: `${lightPosition.x}px` }"></div>
     <div class="project">
-      <div class="left">
+      <div class="principal left">
         <Header />
-        <Footer class="footer"/>
+        <Footer class="footer" />
       </div>
-      <div class="right">
-        
+      <div class="principal right">
+        <Main />
       </div>
     </div>
   </div>
@@ -16,6 +16,7 @@
 <script setup>
 import Header from "./components/HeaderComp.vue";
 import Footer from "./components/FooterComp.vue";
+import Main from "./components/MainComp.vue";
 import { ref } from "vue";
 
 const lightPosition = ref({ x: 0, y: 0 });
@@ -29,18 +30,21 @@ const handleMouseMove = (event) => {
 </script>
 
 <style>
-:root{
-  --font1:#E2E8F0;
-  --font2:#808EA3;
+:root {
+  --font1: #E2E8F0;
+  --font2: #808EA3;
 }
+
 @font-face {
   font-family: 'Inter';
   src: url(./assets/fonts/Inter-Regular.ttf);
 }
+
 @font-face {
   font-family: 'Rubik';
   src: url(./assets/fonts/Rubik-VariableFont_wght.ttf);
 }
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -50,14 +54,13 @@ const handleMouseMove = (event) => {
 
 .body {
   position: relative;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background-color: #0F172A;
-  overflow: hidden;
 }
 
 .light {
-  position: absolute;
+  position: fixed;
   width: 1100px;
   height: 1100px;
   border-radius: 50%;
@@ -66,8 +69,10 @@ const handleMouseMove = (event) => {
       rgba(0, 102, 255, 0) 70%);
   pointer-events: none;
   transform: translate(-50%, -50%);
+  z-index: 50;
 }
-.project{
+
+.project {
   display: flex;
   gap: 20px;
   width: 1400px;
@@ -75,15 +80,23 @@ const handleMouseMove = (event) => {
   padding: 0 96px;
   margin: 0 auto;
 }
-.left{
+
+.principal {
   width: 50%;
   padding: 96px 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 100%;
 }
-.footer{
+.left{
+  display: flex;
+  justify-content: space-between;
+  min-height: 100vh;
+  z-index: 100;
+  position: sticky;
+  top: 0;
+}
+.footer {
   position: relative;
   bottom: 0;
 }
