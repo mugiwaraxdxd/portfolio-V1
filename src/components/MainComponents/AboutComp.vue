@@ -26,11 +26,6 @@
 </script>
 
 <style scoped>
-p {
-    color: var(--font2);
-    line-height: 25px;
-    font-size: 16px;
-}
 
 span {
     font-weight: 500;

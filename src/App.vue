@@ -1,15 +1,12 @@
 <template>
   <div class="body" @mousemove="handleMouseMove">
     <div class="light" :style="{ top: `${lightPosition.y}px`, left: `${lightPosition.x}px` }"></div>
-    <div class="project">
+    <div class="web">
       <div class="principal left">
         <Header />
         <Footer class="footer" />
       </div>
-      <div class="principal right">
-        <Main />
-        <button class="asd">CACAAAAAAAA</button>
-      </div>
+      <Main class="principal" />
     </div>
   </div>
 </template>
@@ -53,6 +50,12 @@ const handleMouseMove = (event) => {
   font-family: 'Rubik';
 }
 
+p {
+  color: var(--font2);
+  line-height: 25px;
+  font-size: 16px;
+}
+
 .body {
   position: relative;
   height: 100%;
@@ -73,7 +76,7 @@ const handleMouseMove = (event) => {
   z-index: 50;
 }
 
-.project {
+.web {
   display: flex;
   gap: 20px;
   width: 1400px;
@@ -89,7 +92,8 @@ const handleMouseMove = (event) => {
   flex-direction: column;
   height: 100%;
 }
-.left{
+
+.left {
   display: flex;
   justify-content: space-between;
   min-height: 100vh;
@@ -97,6 +101,7 @@ const handleMouseMove = (event) => {
   position: sticky;
   top: 0;
 }
+
 .footer {
   position: relative;
   bottom: 0;

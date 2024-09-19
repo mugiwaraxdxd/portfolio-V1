@@ -1,9 +1,9 @@
 <template>
   <footer>
-    <a href=""><TwitterXIcon/></a>
-    <a href=""><InstagramIcon/></a>
-    <a href=""><GithubIcon/></a>
-    <a href=""><LinkedInIcon/></a>
+    <a href=""><TwitterXIcon class="svg"/></a>
+    <a href=""><InstagramIcon class="svg"/></a>
+    <a href=""><GithubIcon class="svg"/></a>
+    <a href=""><LinkedInIcon class="svg"/></a>
   </footer>
 </template>
 
@@ -23,12 +23,12 @@
         width: 30px;
         height: 30px;        
     }
-    svg{
+    .svg{
         width: 30px;
         fill: var(--font2);
         transition: .15s ease;
     }
-    a:hover svg{
+    a:hover .svg{
         fill: var(--font1);
     }
 </style>
