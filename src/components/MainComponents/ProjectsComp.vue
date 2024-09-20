@@ -1,7 +1,7 @@
 <template>
     <ul @mouseover="active" @mouseleave="unactive" class="projects">
         <li>
-            <a @mouseover="numbers(1)" @mouseleave="numbers(0)" :class="{opacity : transparent, opacity1 : number === 1}" class="project" href="https://leafy-liart.vercel.app/">
+            <a :class="{ opacity: transparent }" class="project" href="https://leafy-liart.vercel.app/">
                 <img src="../../assets/images/Leafy-project.png" alt="">
                 <div class="project-text">
                     <h3>Leafy
@@ -16,8 +16,8 @@
             </a>
 
         </li>
-        <li @mouseover="unactive">
-            <a @mouseover="numbers(2)" @mouseleave="numbers(0)" :class="{opacity : transparent, opacity1 : number === 2}" class="project" href="https://yolanda-wood.vercel.app/">
+        <li>
+            <a :class="{ opacity: transparent }" class="project" href="https://yolanda-wood.vercel.app/">
                 <img src="../../assets/images/YW-project.png" alt="">
                 <div class="project-text">
                     <h3>Yolanda Wood
@@ -32,7 +32,7 @@
             </a>
         </li>
         <li>
-            <a @mouseover="numbers(3)" @mouseleave="numbers(0)" :class="{opacity : transparent, opacity1 : number === 3}" class="project" href="">
+            <a :class="{ opacity: transparent }" class="project" href="https://practice-a-three.vercel.app/">
                 <img src="../../assets/images/A-project.png" alt="">
                 <div class="project-text">
                     <h3>A+
@@ -47,7 +47,7 @@
             </a>
         </li>
         <li>
-            <a  @mouseover="numbers(4)" @mouseleave="numbers(0)" :class="{opacity : transparent, opacity1 : number === 4}" class="project" href="https://practice-malecon-663.vercel.app/">
+            <a :class="{ opacity: transparent }" class="project" href="https://practice-malecon-663.vercel.app/">
                 <img src="../../assets/images/MALECON-project.png" alt="">
                 <div class="project-text">
                     <h3>MALECON 663
@@ -69,7 +69,6 @@ import ArrowIcon from '@/assets/icons/ArrowIcon.vue';
 import { ref } from 'vue';
 
 let transparent = ref(false)
-let number = ref(0)
 
 const active = () => {
     transparent.value = true;
@@ -79,9 +78,6 @@ const unactive = () => {
     transparent.value = false;
 }
 
-const numbers = (num) => {
-    number.value = num;
-}
 </script>
 
 <style scoped>
@@ -107,12 +103,14 @@ svg {
     display: flex;
     gap: 20px;
 }
-.projects{
+
+.projects {
     display: flex;
     flex-direction: column;
     gap: 30px;
     z-index: 999;
 }
+
 .project-text {
     display: flex;
     flex-direction: column;
@@ -157,12 +155,14 @@ a:hover {
     background-color: #4b5b7a1c;
     box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.098);
     border-top: 1px solid rgba(255, 255, 255, 0.091);
+    opacity: 1;
 }
-.opacity{
+
+.opacity {
     opacity: .3;
 }
-.opacity1{
+
+.opacity1 {
     opacity: 1;
 }
 </style>
-
