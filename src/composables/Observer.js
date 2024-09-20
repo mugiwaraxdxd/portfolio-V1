@@ -1,30 +1,27 @@
-import { ref, onMounted, onUnmounted } from 'vue';
+import { onMounted, ref } from "vue"
 
-export function useMultipleIntersectionObserver(targetElements) {
-  const isInViewport = ref([]);
+    export function ObserveElements (query) {
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, index) => {
-      isInViewport.value[index] = entry.isIntersecting;
-    });
-  });
+        const currentSection = ref('');
 
-  onMounted(() => {
-    targetElements.forEach((el, index) => {
-      if (el.value) {
-        observer.observe(el.value);
-        isInViewport.value[index] = false;
-      }
-    });
-  });
+        onMounted(() => {
 
-  onUnmounted(() => {
-    targetElements.forEach((el) => {
-      if (el.value) {
-        observer.unobserve(el.value);
-      }
-    });
-  });
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.intersectionRatio > 0) {
+                        currentSection.value = entry.target.getAttribute('id')
+                    }
+                })
+            },
+                {
+                    rootMargin: '0px 0px -90% 0px'
+                }
+            )
+            document.querySelectorAll(query).forEach((section) => {
+                observer.observe(section)
+            })
+        })
 
-  return { isInViewport };
-}
+        return currentSection;
+    }
+

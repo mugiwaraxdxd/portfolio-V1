@@ -6,14 +6,20 @@
       <p>Me dedico a crear experiencias digitales enfocadas al entorno de la web.</p>
     </section>
     <section class="header-links">
-      <a href=""><span></span>SOBRE MÍ</a>
-      <a href=""><span></span>EXPERIECIA</a>
-      <a href=""><span></span>PROYECTOS</a>
+      <a href="" v-for="(section, index) in sections" :key="index" :id="index" :class="{active : observerStore().section == index}"><span :class="{activeSpan : observerStore().section == index}"></span>{{ section }}</a>
     </section>
   </header>
 </template>
 
 <script setup>
+import { observerStore } from '@/stores/observerStore';
+
+
+const sections = [
+  'SOBRE MÍ',
+  'PROYECTOS',
+  'EXPERIENCIA'
+]
 </script>
 
 <style scoped>
@@ -49,11 +55,13 @@ p {
   width: 50%;
   font-size: 16px;
 }
-.header-links{
+
+.header-links {
   display: flex;
   flex-direction: column;
 }
-a{
+
+a {
   display: flex;
   justify-self: center;
   align-items: center;
@@ -68,19 +76,28 @@ a{
   margin: 4px 0;
   gap: 10px;
 }
-span{
+
+span {
   display: block;
   width: 35px;
   height: 1px;
   background-color: var(--font2);
   transition: .15s ease;
 }
-a:hover{
+
+a:hover {
   color: var(--font1);
 }
-a:hover span{
+
+a:hover span {
   background-color: var(--font1);
   width: 70px;
 }
-
+.active{
+  color: var(--font1);
+}
+.activeSpan{
+  background-color: var(--font1);
+  width: 70px;
+}
 </style>
