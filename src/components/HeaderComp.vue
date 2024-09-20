@@ -6,7 +6,9 @@
       <p>Me dedico a crear experiencias digitales enfocadas al entorno de la web.</p>
     </section>
     <section class="header-links">
-      <a href="" v-for="(section, index) in sections" :key="index" :id="index" :class="{active : observerStore().section == index}"><span :class="{activeSpan : observerStore().section == index}"></span>{{ section }}</a>
+      <a href="" v-for="(section, index) in sections" :key="index" :id="index"
+        :class="{ active: observerStore().section == index }"><span
+          :class="{ activeSpan: observerStore().section == index }"></span>{{ section }}</a>
     </section>
   </header>
 </template>
@@ -93,10 +95,12 @@ a:hover span {
   background-color: var(--font1);
   width: 70px;
 }
-.active{
+
+.active {
   color: var(--font1);
 }
-.activeSpan{
+
+.activeSpan {
   background-color: var(--font1);
   width: 70px;
 }

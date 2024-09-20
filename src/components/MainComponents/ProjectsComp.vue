@@ -1,67 +1,75 @@
 <template>
-    <ul @mouseover="active" @mouseleave="unactive" class="projects">
-        <li>
-            <a :class="{ opacity: transparent }" class="project" href="https://leafy-liart.vercel.app/">
-                <img src="../../assets/images/Leafy-project.png" alt="">
-                <div class="project-text">
-                    <h3>Leafy
-                        <ArrowIcon />
-                    </h3>
-                    <p>Desarrollé una landing page responsiva usando solo HTML y CSS. El diseño incluye secciones como
-                        un
-                        banner principal, descripción de servicios, galería de imágenes y un formulario de contacto. Se
-                        optimizó para una experiencia de usuario fluida en dispositivos móviles y de escritorio.</p>
-                    <ul class="tools-list"></ul>
-                </div>
-            </a>
+    <section>
+        <ul @mouseover="active" @mouseleave="unactive" class="projects">
+            <li>
+                <a :class="{ opacity: transparent }" class="project" href="https://leafy-liart.vercel.app/">
+                    <img src="../../assets/images/Leafy-project.png" alt="">
+                    <div class="project-text">
+                        <h3>Leafy
+                            <ArrowIcon />
+                        </h3>
+                        <p>"Leafy es un proyecto personal desarrollado con Vue.js para practicar mis habilidades. Se
+                            trata de una landing page responsiva con un diseño limpio y secciones como un banner
+                            principal, servicios, galería de imágenes y formulario de contacto. La web está optimizada
+                            para una experiencia fluida en dispositivos móviles y de escritorio."</p>
+                        <ul class="tools-list"></ul>
+                    </div>
+                </a>
 
-        </li>
-        <li>
-            <a :class="{ opacity: transparent }" class="project" href="https://yolanda-wood.vercel.app/">
-                <img src="../../assets/images/YW-project.png" alt="">
-                <div class="project-text">
-                    <h3>Yolanda Wood
-                        <ArrowIcon />
-                    </h3>
-                    <p>Desarrollé una landing page responsiva usando solo HTML y CSS. El diseño incluye secciones como
-                        un
-                        banner principal, descripción de servicios, galería de imágenes y un formulario de contacto. Se
-                        optimizó para una experiencia de usuario fluida en dispositivos móviles y de escritorio.</p>
-                    <ul class="tools-list"></ul>
-                </div>
-            </a>
-        </li>
-        <li>
-            <a :class="{ opacity: transparent }" class="project" href="https://practice-a-three.vercel.app/">
-                <img src="../../assets/images/A-project.png" alt="">
-                <div class="project-text">
-                    <h3>A+
-                        <ArrowIcon />
-                    </h3>
-                    <p>Desarrollé una landing page responsiva usando solo HTML y CSS. El diseño incluye secciones como
-                        un
-                        banner principal, descripción de servicios, galería de imágenes y un formulario de contacto. Se
-                        optimizó para una experiencia de usuario fluida en dispositivos móviles y de escritorio.</p>
-                    <ul class="tools-list"></ul>
-                </div>
-            </a>
-        </li>
-        <li>
-            <a :class="{ opacity: transparent }" class="project" href="https://practice-malecon-663.vercel.app/">
-                <img src="../../assets/images/MALECON-project.png" alt="">
-                <div class="project-text">
-                    <h3>MALECON 663
-                        <ArrowIcon />
-                    </h3>
-                    <p>Desarrollé una landing page responsiva usando solo HTML y CSS. El diseño incluye secciones como
-                        un
-                        banner principal, descripción de servicios, galería de imágenes y un formulario de contacto. Se
-                        optimizó para una experiencia de usuario fluida en dispositivos móviles y de escritorio.</p>
-                    <ul class="tools-list"></ul>
-                </div>
-            </a>
-        </li>
-    </ul>
+            </li>
+            <li>
+                <a :class="{ opacity: transparent }" class="project" href="https://yolanda-wood.vercel.app/">
+                    <img src="../../assets/images/YW-project.png" alt="">
+                    <div class="project-text">
+                        <h3>Yolanda Wood
+                            <ArrowIcon />
+                        </h3>
+                        <p>Desarrollé una landing page responsiva usando solo HTML y CSS. El diseño incluye secciones
+                            como
+                            un
+                            banner principal, descripción de servicios, galería de imágenes y un formulario de contacto.
+                            Se
+                            optimizó para una experiencia de usuario fluida en dispositivos móviles y de escritorio.</p>
+                        <ul class="tools-list"></ul>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a :class="{ opacity: transparent }" class="project" href="https://practice-a-three.vercel.app/">
+                    <img src="../../assets/images/A-project.png" alt="">
+                    <div class="project-text">
+                        <h3>A+
+                            <ArrowIcon />
+                        </h3>
+                        <p>Desarrollé una landing page responsiva usando solo HTML y CSS. El diseño incluye secciones
+                            como
+                            un
+                            banner principal, descripción de servicios, galería de imágenes y un formulario de contacto.
+                            Se
+                            optimizó para una experiencia de usuario fluida en dispositivos móviles y de escritorio.</p>
+                        <ul class="tools-list"></ul>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a :class="{ opacity: transparent }" class="project" href="https://practice-malecon-663.vercel.app/">
+                    <img src="../../assets/images/MALECON-project.png" alt="">
+                    <div class="project-text">
+                        <h3>MALECON 663
+                            <ArrowIcon />
+                        </h3>
+                        <p>Desarrollé una landing page responsiva usando solo HTML y CSS. El diseño incluye secciones
+                            como
+                            un
+                            banner principal, descripción de servicios, galería de imágenes y un formulario de contacto.
+                            Se
+                            optimizó para una experiencia de usuario fluida en dispositivos móviles y de escritorio.</p>
+                        <ul class="tools-list"></ul>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </section>
 </template>
 
 <script setup>
@@ -73,7 +81,6 @@ let transparent = ref(false)
 const active = () => {
     transparent.value = true;
 }
-
 const unactive = () => {
     transparent.value = false;
 }
@@ -165,4 +172,5 @@ a:hover {
 .opacity1 {
     opacity: 1;
 }
+
 </style>
