@@ -8,11 +8,15 @@
                         <h3>Leafy
                             <ArrowIcon />
                         </h3>
-                        <p>"Leafy es un proyecto personal desarrollado con Vue.js para practicar mis habilidades. Se
-                            trata de una landing page responsiva con un diseño limpio y secciones como un banner
-                            principal, servicios, galería de imágenes y formulario de contacto. La web está optimizada
-                            para una experiencia fluida en dispositivos móviles y de escritorio."</p>
-                        <ul class="tools-list"></ul>
+                        <p>Leafy es un proyecto personal desarrollado con Vue.js para mejorar mis habilidades. Es una
+                            landing page responsiva con diseño sencillo, que incluye un banner, servicios, galería de
+                            imágenes y formulario de contacto, optimizada para móviles y escritorio.</p>
+                        <ul class="tools-list">
+                            <li class="tool">Vue.js</li>
+                            <li class="tool">HTML</li>
+                            <li class="tool">CSS</li>
+                            <li class="tool">Javascript</li>
+                        </ul>
                     </div>
                 </a>
 
@@ -24,13 +28,13 @@
                         <h3>Yolanda Wood
                             <ArrowIcon />
                         </h3>
-                        <p>Desarrollé una landing page responsiva usando solo HTML y CSS. El diseño incluye secciones
-                            como
-                            un
-                            banner principal, descripción de servicios, galería de imágenes y un formulario de contacto.
-                            Se
-                            optimizó para una experiencia de usuario fluida en dispositivos móviles y de escritorio.</p>
-                        <ul class="tools-list"></ul>
+                        <p>Yolanda Wood es un proyecto de práctica enfocado en una landing page responsive hecha con
+                            HTML y CSS. Incluye un banner, servicios, galería y formulario, optimizada para móviles y
+                            desktop.</p>
+                        <ul class="tools-list">
+                            <li class="tool">HTML</li>
+                            <li class="tool">CSS</li>
+                        </ul>
                     </div>
                 </a>
             </li>
@@ -41,13 +45,14 @@
                         <h3>A+
                             <ArrowIcon />
                         </h3>
-                        <p>Desarrollé una landing page responsiva usando solo HTML y CSS. El diseño incluye secciones
-                            como
-                            un
-                            banner principal, descripción de servicios, galería de imágenes y un formulario de contacto.
-                            Se
-                            optimizó para una experiencia de usuario fluida en dispositivos móviles y de escritorio.</p>
-                        <ul class="tools-list"></ul>
+                        <p>A+ es un proyecto de práctica diseñado como una landing page adaptable, creada usando solo
+                            HTML y CSS. Presenta un banner destacado, secciones de servicios, galería de imágenes, y un
+                            formulario de contacto. La página está optimizada para ofrecer una experiencia fluida tanto
+                            en dispositivos móviles como en escritorio.</p>
+                        <ul class="tools-list">
+                            <li class="tool">HTML</li>
+                            <li class="tool">CSS</li>
+                        </ul>
                     </div>
                 </a>
             </li>
@@ -58,13 +63,14 @@
                         <h3>MALECON 663
                             <ArrowIcon />
                         </h3>
-                        <p>Desarrollé una landing page responsiva usando solo HTML y CSS. El diseño incluye secciones
-                            como
-                            un
-                            banner principal, descripción de servicios, galería de imágenes y un formulario de contacto.
-                            Se
-                            optimizó para una experiencia de usuario fluida en dispositivos móviles y de escritorio.</p>
-                        <ul class="tools-list"></ul>
+                        <p>Esta landing page, MALECON 663, se desarrolló como un ejercicio práctico utilizando
+                            únicamente HTML y CSS. Ofrece un diseño responsivo que incluye un banner principal, una
+                            sección de servicios, una galería de imágenes y un formulario de contacto, garantizando una
+                            experiencia de navegación fluida tanto en dispositivos móviles como en escritorio.</p>
+                        <ul class="tools-list">
+                            <li class="tool">HTML</li>
+                            <li class="tool">CSS</li>
+                        </ul>
                     </div>
                 </a>
             </li>
@@ -88,9 +94,10 @@ const unactive = () => {
 </script>
 
 <style scoped>
-section{
+section {
     padding: 96px 0 0 0;
 }
+
 li {
     list-style: none;
 }
@@ -125,6 +132,19 @@ svg {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.tools-list {
+    display: flex;
+    gap: 10px;
+}
+
+.tool {
+    padding: 5px 12px;
+    background-color: #132E44;
+    border-radius: 50px;
+    font-size: 12px;
+    color: #64FFDA;
 }
 
 h3 {
@@ -175,5 +195,4 @@ a:hover {
 .opacity1 {
     opacity: 1;
 }
-
 </style>
