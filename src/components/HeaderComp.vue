@@ -6,7 +6,7 @@
       <p>Me dedico a crear experiencias digitales enfocadas al entorno de la web.</p>
     </section>
     <section class="header-links">
-      <a href="" v-for="(section, index) in sections" :key="index" :id="index"
+      <a :href="'#'+index" v-for="(section, index) in sections" :key="index"
         :class="{ active: observerStore().section == index }"><span
           :class="{ activeSpan: observerStore().section == index }"></span>{{ section }}</a>
     </section>

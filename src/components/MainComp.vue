@@ -21,6 +21,6 @@
     main {
       display: flex;
       flex-direction: column;
-      gap: 120px;
+      gap: 50px
     }
 </style>

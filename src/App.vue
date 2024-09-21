@@ -48,6 +48,7 @@ const handleMouseMove = (event) => {
   margin: 0;
   padding: 0;
   font-family: 'Rubik';
+  scroll-behavior: smooth;
 }
 
 p {
@@ -87,13 +88,13 @@ p {
 
 .principal {
   width: 50%;
-  padding: 96px 0;
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
 .left {
+  padding: 96px 0;
   display: flex;
   justify-content: space-between;
   min-height: 100vh;

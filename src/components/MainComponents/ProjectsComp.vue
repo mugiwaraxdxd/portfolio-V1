@@ -88,6 +88,9 @@ const unactive = () => {
 </script>
 
 <style scoped>
+section{
+    padding: 96px 0 0 0;
+}
 li {
     list-style: none;
 }
