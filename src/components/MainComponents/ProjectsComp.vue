@@ -1,8 +1,9 @@
 <template>
     <section>
+        <h3 class="section-title">PROYECTOS</h3>
         <ul @mouseover="active" @mouseleave="unactive" class="projects">
             <li>
-                <a :class="{ opacity: transparent }" class="project" href="https://leafy-liart.vercel.app/">
+                <a target="_blank" :class="{ opacity: transparent }" class="project" href="https://leafy-liart.vercel.app/">
                     <img src="../../assets/images/Leafy-project.png" alt="">
                     <div class="project-text">
                         <h3>Leafy
@@ -22,7 +23,7 @@
 
             </li>
             <li>
-                <a :class="{ opacity: transparent }" class="project" href="https://yolanda-wood.vercel.app/">
+                <a target="_blank" :class="{ opacity: transparent }" class="project" href="https://yolanda-wood.vercel.app/">
                     <img src="../../assets/images/YW-project.png" alt="">
                     <div class="project-text">
                         <h3>Yolanda Wood
@@ -39,7 +40,7 @@
                 </a>
             </li>
             <li>
-                <a :class="{ opacity: transparent }" class="project" href="https://practice-a-three.vercel.app/">
+                <a target="_blank" :class="{ opacity: transparent }" class="project" href="https://practice-a-three.vercel.app/">
                     <img src="../../assets/images/A-project.png" alt="">
                     <div class="project-text">
                         <h3>A+
@@ -57,7 +58,7 @@
                 </a>
             </li>
             <li>
-                <a :class="{ opacity: transparent }" class="project" href="https://practice-malecon-663.vercel.app/">
+                <a target="_blank" :class="{ opacity: transparent }" class="project" href="https://practice-malecon-663.vercel.app/">
                     <img src="../../assets/images/MALECON-project.png" alt="">
                     <div class="project-text">
                         <h3>MALECON 663
@@ -95,7 +96,22 @@ const unactive = () => {
 
 <style scoped>
 section {
-    padding: 96px 0 0 0;
+    padding: 56px 0 56px 0;
+}
+
+.section-title {
+    color: var(--font1);
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 3px;
+    padding: 20px 50px;
+    position: sticky;
+    top: 0;
+    background-color: #0f172aaa;
+    backdrop-filter: blur(5px);
+    margin-left: -50px;
+    margin-right: -50px;
+    display: none;
 }
 
 li {
@@ -137,6 +153,7 @@ svg {
 .tools-list {
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .tool {
@@ -181,12 +198,6 @@ a:hover h3 {
     color: #64FFDA;
 }
 
-a:hover {
-    background-color: #4b5b7a1c;
-    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.098);
-    border-top: 1px solid rgba(255, 255, 255, 0.091);
-    opacity: 1;
-}
 
 .opacity {
     opacity: .3;
@@ -194,5 +205,58 @@ a:hover {
 
 .opacity1 {
     opacity: 1;
+}
+
+@media (max-width: 1024px) {
+    img {
+        width: 30%;
+        max-width: 200px;
+    }
+
+    .section-title {
+        display: block;
+    }
+
+    .opacity {
+        opacity: 1;
+    }
+    a {
+        pointer-events: none;
+    }
+
+    a h3 {
+        pointer-events: auto;
+    }
+}
+
+@media (min-width: 1025px) {
+    a:hover {
+        background-color: #4b5b7a1c;
+        box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.098);
+        border-top: 1px solid rgba(255, 255, 255, 0.091);
+        opacity: 1;
+    }
+}
+@media (max-width: 700px){
+  .section-title{
+    margin-left: -20px;
+    margin-right: -20px;
+    padding: 20px;
+  }
+  a{
+    padding: 10px;
+  }
+  @media (max-width: 640px) {
+    a{
+        flex-direction: column;
+    }
+    img{
+        order: 3;
+        min-width: 200px;
+    }
+    .projects{
+        gap: 70px;
+    }
+  }
 }
 </style>

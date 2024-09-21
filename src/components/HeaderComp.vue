@@ -6,7 +6,7 @@
       <p>Me dedico a crear experiencias digitales enfocadas al entorno de la web.</p>
     </section>
     <section class="header-links">
-      <a :href="'#'+index" v-for="(section, index) in sections" :key="index"
+      <a :href="'#' + index" v-for="(section, index) in sections" :key="index"
         :class="{ active: observerStore().section == index }"><span
           :class="{ activeSpan: observerStore().section == index }"></span>{{ section }}</a>
     </section>
@@ -49,13 +49,14 @@ h2 {
   color: var(--font1);
   font-weight: 400;
   font-size: 22px;
-  margin-bottom: 20px
+  margin-bottom: 20px;
 }
 
 p {
   color: var(--font2);
   width: 50%;
   font-size: 16px;
+  min-width: 320px;
 }
 
 .header-links {
@@ -103,5 +104,32 @@ a:hover span {
 .activeSpan {
   background-color: var(--font1);
   width: 70px;
+}
+
+@media (max-width: 1024px) {
+  header{
+    margin-bottom: 40px;
+    height: auto;
+  }
+  .header-links{
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  h1{
+    font-size: 37px;
+  }
+  h2{
+    font-size: 18px;
+  }
+  p{
+    font-size: 15px;
+    
+  }
+  @media (max-width: 360px) {
+    p{
+      min-width: 280px;
+    }
+  }
 }
 </style>

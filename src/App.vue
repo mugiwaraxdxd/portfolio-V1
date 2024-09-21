@@ -87,7 +87,7 @@ p {
 }
 
 .principal {
-  width: 50%;
+  flex: 1;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -106,5 +106,38 @@ p {
 .footer {
   position: relative;
   bottom: 0;
+}
+
+/* DE AQUI EN ADELANTE SON LOS MEDIA QUERIS */
+
+@media (max-width: 1420px) {
+  .web{
+    width: 100%;
+    padding: 0 5%;
+  }
+}
+@media (max-width: 1024px){
+  .light{
+    display: none;
+  }
+  .web{
+    flex-direction: column;
+    padding: 0 50px;
+  }
+  .left{
+    position: static;
+    padding: 56px 0;
+    justify-content:start;
+    min-height: auto;
+    height: 400px;
+  }
+}
+@media (max-width: 700px){
+  .web{
+    padding: 0 20px;
+  }
+  .left{
+    padding: 45px 0;
+  }
 }
 </style>
