@@ -49,6 +49,7 @@ const handleMouseMove = (event) => {
   padding: 0;
   font-family: 'Rubik';
   scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
 }
 
 p {
@@ -111,33 +112,45 @@ p {
 /* DE AQUI EN ADELANTE SON LOS MEDIA QUERIS */
 
 @media (max-width: 1420px) {
-  .web{
+  .web {
     width: 100%;
     padding: 0 5%;
   }
 }
-@media (max-width: 1024px){
-  .light{
+
+@media (max-width: 1024px) {
+  .light {
     display: none;
   }
-  .web{
+
+  .web {
     flex-direction: column;
     padding: 0 50px;
   }
-  .left{
+
+  .left {
     position: static;
     padding: 56px 0;
-    justify-content:start;
+    justify-content: start;
     min-height: auto;
     height: 400px;
   }
 }
-@media (max-width: 700px){
-  .web{
+
+@media (max-width: 700px) {
+  .web {
     padding: 0 20px;
   }
-  .left{
+
+  .left {
     padding: 45px 0;
   }
+}
+
+/* ESTILOS DE OTROS COMPONENTES QUE NECESITAN ESTAR AQUI */
+
+.span-about {
+  font-weight: 500;
+  color: var(--font1);
 }
 </style>

@@ -1,17 +1,16 @@
 <template>
     <section>
-        <h3 class="section-title">PROYECTOS</h3>
+        <h3 class="section-title">{{ $t('projectsComp.title') }}</h3>
         <ul @mouseover="active" @mouseleave="unactive" class="projects">
             <li>
-                <a target="_blank" :class="{ opacity: transparent }" class="project" href="https://leafy-liart.vercel.app/">
+                <a target="_blank" :class="{ opacity: transparent }" class="project"
+                    href="https://leafy-liart.vercel.app/">
                     <img src="../../assets/images/Leafy-project.png" alt="">
                     <div class="project-text">
                         <h3>Leafy
                             <ArrowIcon />
                         </h3>
-                        <p>Leafy es un proyecto personal desarrollado con Vue.js para mejorar mis habilidades. Es una
-                            landing page responsiva con diseño sencillo, que incluye un banner, servicios, galería de
-                            imágenes y formulario de contacto, optimizada para móviles y escritorio.</p>
+                        <p>{{ $t('projectsComp.leafy') }}</p>
                         <ul class="tools-list">
                             <li class="tool">Vue.js</li>
                             <li class="tool">HTML</li>
@@ -23,15 +22,14 @@
 
             </li>
             <li>
-                <a target="_blank" :class="{ opacity: transparent }" class="project" href="https://yolanda-wood.vercel.app/">
+                <a target="_blank" :class="{ opacity: transparent }" class="project"
+                    href="https://yolanda-wood.vercel.app/">
                     <img src="../../assets/images/YW-project.png" alt="">
                     <div class="project-text">
                         <h3>Yolanda Wood
                             <ArrowIcon />
                         </h3>
-                        <p>Yolanda Wood es un proyecto de práctica enfocado en una landing page responsive hecha con
-                            HTML y CSS. Incluye un banner, servicios, galería y formulario, optimizada para móviles y
-                            desktop.</p>
+                        <p>{{ $t('projectsComp.yolanda') }}</p>
                         <ul class="tools-list">
                             <li class="tool">HTML</li>
                             <li class="tool">CSS</li>
@@ -40,16 +38,14 @@
                 </a>
             </li>
             <li>
-                <a target="_blank" :class="{ opacity: transparent }" class="project" href="https://practice-a-three.vercel.app/">
+                <a target="_blank" :class="{ opacity: transparent }" class="project"
+                    href="https://practice-a-three.vercel.app/">
                     <img src="../../assets/images/A-project.png" alt="">
                     <div class="project-text">
                         <h3>A+
                             <ArrowIcon />
                         </h3>
-                        <p>A+ es un proyecto de práctica diseñado como una landing page adaptable, creada usando solo
-                            HTML y CSS. Presenta un banner destacado, secciones de servicios, galería de imágenes, y un
-                            formulario de contacto. La página está optimizada para ofrecer una experiencia fluida tanto
-                            en dispositivos móviles como en escritorio.</p>
+                        <p>{{ $t('projectsComp.A') }}</p>
                         <ul class="tools-list">
                             <li class="tool">HTML</li>
                             <li class="tool">CSS</li>
@@ -58,16 +54,14 @@
                 </a>
             </li>
             <li>
-                <a target="_blank" :class="{ opacity: transparent }" class="project" href="https://practice-malecon-663.vercel.app/">
+                <a target="_blank" :class="{ opacity: transparent }" class="project"
+                    href="https://practice-malecon-663.vercel.app/">
                     <img src="../../assets/images/MALECON-project.png" alt="">
                     <div class="project-text">
                         <h3>MALECON 663
                             <ArrowIcon />
                         </h3>
-                        <p>Esta landing page, MALECON 663, se desarrolló como un ejercicio práctico utilizando
-                            únicamente HTML y CSS. Ofrece un diseño responsivo que incluye un banner principal, una
-                            sección de servicios, una galería de imágenes y un formulario de contacto, garantizando una
-                            experiencia de navegación fluida tanto en dispositivos móviles como en escritorio.</p>
+                        <p>{{ $t('projectsComp.malecon') }}</p>
                         <ul class="tools-list">
                             <li class="tool">HTML</li>
                             <li class="tool">CSS</li>
@@ -220,6 +214,7 @@ a:hover h3 {
     .opacity {
         opacity: 1;
     }
+
     a {
         pointer-events: none;
     }
@@ -237,26 +232,31 @@ a:hover h3 {
         opacity: 1;
     }
 }
-@media (max-width: 700px){
-  .section-title{
-    margin-left: -20px;
-    margin-right: -20px;
-    padding: 20px;
-  }
-  a{
-    padding: 10px;
-  }
-  @media (max-width: 640px) {
-    a{
-        flex-direction: column;
+
+@media (max-width: 700px) {
+    .section-title {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding: 20px;
     }
-    img{
-        order: 3;
-        min-width: 200px;
+
+    a {
+        padding: 10px;
     }
-    .projects{
-        gap: 70px;
+
+    @media (max-width: 640px) {
+        a {
+            flex-direction: column;
+        }
+
+        img {
+            order: 3;
+            min-width: 200px;
+        }
+
+        .projects {
+            gap: 70px;
+        }
     }
-  }
 }
 </style>

@@ -2,25 +2,39 @@
   <header>
     <section class="header-text">
       <h1>Yamir Pedrera</h1>
-      <h2>Desarrollador Frontend Junior</h2>
-      <p>Me dedico a crear experiencias digitales enfocadas al entorno de la web.</p>
+      <h2>{{ $t('headerComp.headerText.dev') }}</h2>
+      <p>{{ $t('headerComp.headerText.info') }}</p>
     </section>
     <section class="header-links">
       <a :href="'#' + index" v-for="(section, index) in sections" :key="index"
         :class="{ active: observerStore().section == index }"><span
-          :class="{ activeSpan: observerStore().section == index }"></span>{{ section }}</a>
+          :class="{ activeSpan: observerStore().section == index }"></span>{{ $t(`headerComp.links.${section}`) }}</a>
     </section>
+    <div @click="changeLang" class="lang">
+      <div :class="{ langES: es }" class="circle"></div>
+      <p>EN</p>
+      <p>ES</p>
+    </div>
   </header>
 </template>
 
 <script setup>
 import { observerStore } from '@/stores/observerStore';
+import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
 
+let { locale } = useI18n()
+let es = ref(false)
+
+const changeLang = () => {
+  locale.value = locale.value === 'en' ? 'es' : 'en'
+  es.value = !es.value
+}
 
 const sections = [
-  'SOBRE MÍ',
-  'PROYECTOS',
-  'EXPERIENCIA'
+  'aboutLink',
+  'projectsLink',
+  'experienceLink'
 ]
 </script>
 
@@ -29,7 +43,63 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 360px;
+  height: 460px;
+}
+
+.lang {
+  cursor: pointer;
+  width: 75px;
+  border: 1px solid var(--font2);
+  height: 40px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  align-items: center;
+  position: relative;
+  transition: .2s ease;
+}
+
+.lang p {
+  color: var(--font1);
+}
+
+.circle {
+  position: absolute;
+  background-color: var(--font2);
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  right: 5px;
+  transition: .2s ease;
+}
+
+.langES {
+  transform: translateX(-33px);
+}
+
+.lang:hover {
+  border-color: #64FFDA;
+}
+
+.lang:hover .circle {
+  background-color: #64FFDA;
+}
+
+select {
+  width: 40px;
+  appearance: none;
+  background-color: unset;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+option {
+  background-color: unset;
+  transition: .2s ease;
 }
 
 .header-text {
@@ -52,7 +122,7 @@ h2 {
   margin-bottom: 20px;
 }
 
-p {
+.header-text p {
   color: var(--font2);
   width: 50%;
   font-size: 16px;
@@ -107,29 +177,46 @@ a:hover span {
 }
 
 @media (max-width: 1024px) {
-  header{
+  header {
     margin-bottom: 40px;
     height: auto;
   }
-  .header-links{
+
+  .header-links {
     display: none;
   }
+
+  .lang {
+    margin-top: 20px;
+  }
 }
+
 @media (max-width: 700px) {
-  h1{
+  h1 {
     font-size: 37px;
   }
-  h2{
+
+  h2 {
     font-size: 18px;
   }
-  p{
+
+  p {
     font-size: 15px;
-    
+
   }
-  @media (max-width: 360px) {
-    p{
-      min-width: 280px;
-    }
+
+  .lang:hover {
+    border-color: var(--font2);
+  }
+
+  .lang:hover .circle {
+    background-color: var(--font2);
+  }
+}
+
+@media (max-width: 360px) {
+  .header-text p {
+    min-width: 280px;
   }
 }
 </style>
