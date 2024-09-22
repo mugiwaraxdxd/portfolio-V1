@@ -1,25 +1,24 @@
 <template>
     <section>
         <h3 class="section-title">SOBRE MÍ</h3>
-        <p>Alrededor del 2020 comencé a interesarme por el mundo de la programación, exploré un poco sobre que trataba,
-            vi el montón de cosas que puedes crear con ganas y algo de creatividad, una vez me decanté por el desarrollo
-            web aprendí sobre <span>HTML</span> como cualquier inicio, a la par indagaba sobre <span>CSS</span> mediante
-            cursos y libros, una vez
-            conocí lo básico en ambos realicé varios proyectos hasta que decidí comenzar con <span>Javascript</span>,
-            realicé una
-            serie de proyectos ahí tambien para familiarizarme mejor y tener la práctica necesaria, gracias a todo ello
-            también puedo usar <span>Git/Github</span>, por último dominé <span>Vue.js</span> ya que fue el framework
-            por el que me decidí y aquí estoy, desarrollando mi primer portfolio con
+        <p>Alrededor del 2020, comencé a interesarme por el mundo de la programación. Exploré un poco sobre que trataba y
+            vi la cantidad de cosas que se pueden crear con dedicación y algo de creatividad. Una vez me decidí por el desarrollo
+            web, comencé aprendiendo <span>HTML</span> como suele ser habitual. Al mismo tiempo,investigaba sobre <span>CSS</span> mediante
+            cursos y libros. Una vez
+            dominé lo básico en ambos realicé, varios proyectos hasta que decidí comenzar con <span>Javascript</span>.
+            Tambien hice una
+            serie de proyectos allí para familiarizarme mejor y obtener la práctica necesaria. Gracias a todo ello,
+            también puedo usar <span>Git</span> y <span>Github</span>. Por último, dominé <span>Vue.js</span>, ya que fue el framework
+            por el que opté, y aquí estoy, desarrollando mi primer portfolio con
             dicho framework.</p>
 
-        <p>Actualmente me encuentro formándome más en el lado del backend mientras sigo desarrollando mis habilidades
-            con este framework, estoy aprendiendo sobre <span>Node.js</span> con <span>Express</span> y a cerca de
-            <span>Bases de datos</span> tanto
-            relacionales como no relacionales, tengo la certeza de que podré desarrollar pronto aplicaciones web
-            completas, estoy emocionado al respecto.
+        <p>Actualmente, me encuentro formándome más en el área del backend mientras sigo desarrollando mis habilidades
+            con este framework. Estoy aprendiendo sobre <span>Node.js</span> con <span>Express</span> y sobre <span>Bases de datos</span>, tanto
+            relacionales como no relacionales. Tengo la certeza de que pronto podré desarrollar aplicaciones web
+            completas, y estoy emocionado al respecto.
         </p>
 
-        <p>En resumen será un placer ayudarte a llevar al mundo digital cualquier idea que propongas :D</p>
+        <p>En resumen, será un placer ayudarte a llevar cualquier idea que te propongas al mundo digital. :)</p>
     </section>
 </template>
 
