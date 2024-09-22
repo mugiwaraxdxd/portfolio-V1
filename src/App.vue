@@ -57,7 +57,10 @@ p {
   line-height: 25px;
   font-size: 16px;
 }
-
+p::selection, span::selection, h1::selection, h2::selection, h3::selection, a::selection, img::selection, li::selection {
+  background-color: #64FFDA;
+  color: #134E4A;
+}
 .body {
   position: relative;
   height: 100%;

@@ -11,9 +11,9 @@
           :class="{ activeSpan: observerStore().section == index }"></span>{{ $t(`headerComp.links.${section}`) }}</a>
     </section>
     <div @click="changeLang" class="lang">
-      <div :class="{ langES: es }" class="circle"></div>
-      <p>EN</p>
-      <p>ES</p>
+      <LangIcon :class="{ langES: es }" class="circle" />
+      <p class="en" :class="{ unactive: es }">EN</p>
+      <p class="es" :class="{ active: es }">ES</p>
     </div>
   </header>
 </template>
@@ -22,6 +22,7 @@
 import { observerStore } from '@/stores/observerStore';
 import { ref } from 'vue';
 import { useI18n } from 'vue-i18n';
+import LangIcon from '@/assets/icons/LangIcon.vue';
 
 let { locale } = useI18n()
 let es = ref(false)
@@ -66,7 +67,6 @@ header {
 
 .circle {
   position: absolute;
-  background-color: var(--font2);
   height: 30px;
   width: 30px;
   border-radius: 100%;
@@ -78,12 +78,28 @@ header {
   transform: translateX(-33px);
 }
 
+p {
+  transition: .2s ease;
+}
+
+.es {
+  opacity: 0;
+}
+
+.active {
+  opacity: 1;
+}
+
+.unactive {
+  opacity: 0;
+}
+
 .lang:hover {
   border-color: #64FFDA;
 }
 
 .lang:hover .circle {
-  background-color: #64FFDA;
+  fill: #64FFDA;
 }
 
 select {
@@ -210,7 +226,17 @@ a:hover span {
   }
 
   .lang:hover .circle {
-    background-color: var(--font2);
+    fill: var(--font2);
+  }
+  .lang, .circle{
+    transition: .1s ease;
+  }
+  .lang:active {
+    border-color: #64FFDA;
+  }
+
+  .lang:active .circle {
+    fill: #64FFDA;
   }
 }
 
