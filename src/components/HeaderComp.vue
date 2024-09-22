@@ -34,9 +34,8 @@ const changeLang = () => {
 
 const sections = [
   'aboutLink',
-  'projectsLink',
-  'experienceLink'
-]
+  'projectsLink'
+  ]
 </script>
 
 <style scoped>
