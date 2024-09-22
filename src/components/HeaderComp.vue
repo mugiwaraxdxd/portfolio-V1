@@ -45,6 +45,7 @@ header {
   flex-direction: column;
   justify-content: space-between;
   height: 460px;
+  position: relative;
 }
 
 .lang {
@@ -57,8 +58,8 @@ header {
   justify-content: space-between;
   padding: 5px 10px;
   align-items: center;
-  position: relative;
   transition: .2s ease;
+  position: relative;
 }
 
 .lang p {
@@ -100,22 +101,6 @@ p {
 
 .lang:hover .circle {
   fill: #64FFDA;
-}
-
-select {
-  width: 40px;
-  appearance: none;
-  background-color: unset;
-  outline: none;
-  box-shadow: none;
-  border: none;
-  font-family: inherit;
-  font-size: inherit;
-}
-
-option {
-  background-color: unset;
-  transition: .2s ease;
 }
 
 .header-text {
@@ -203,7 +188,9 @@ a:hover span {
   }
 
   .lang {
-    margin-top: 20px;
+    position: absolute;
+    top: 8px;
+    right: 0px;
   }
 }
 
@@ -228,9 +215,12 @@ a:hover span {
   .lang:hover .circle {
     fill: var(--font2);
   }
-  .lang, .circle{
+
+  .lang,
+  .circle {
     transition: .1s ease;
   }
+
   .lang:active {
     border-color: #64FFDA;
   }
@@ -243,6 +233,13 @@ a:hover span {
 @media (max-width: 360px) {
   .header-text p {
     min-width: 280px;
+  }
+}
+
+@media (max-width: 390px) {
+  .lang {
+    top: 160px;
+    right: 20px;
   }
 }
 </style>
