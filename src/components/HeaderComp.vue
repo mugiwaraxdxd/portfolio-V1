@@ -35,7 +35,7 @@ const changeLang = () => {
 const sections = [
   'aboutLink',
   'projectsLink'
-  ]
+]
 </script>
 
 <style scoped>
@@ -191,22 +191,6 @@ a:hover span {
     top: 8px;
     right: 0px;
   }
-}
-
-@media (max-width: 700px) {
-  h1 {
-    font-size: 37px;
-  }
-
-  h2 {
-    font-size: 18px;
-  }
-
-  p {
-    font-size: 15px;
-
-  }
-
   .lang:hover {
     border-color: var(--font2);
   }
@@ -226,6 +210,20 @@ a:hover span {
 
   .lang:active .circle {
     fill: #64FFDA;
+  }
+}
+
+@media (max-width: 700px) {
+  h1 {
+    font-size: 37px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 15px;
   }
 }
 
