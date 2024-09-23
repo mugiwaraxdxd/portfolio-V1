@@ -2,7 +2,7 @@ export const messages = {
     en: {
         headerComp: {
             headerText: {
-                dev: 'Frontend Developer Junior',
+                dev: 'Junior Frontend Developer',
                 info: 'I work on digital experiences creation, focusing on a web environment.'
             },
             links: {
