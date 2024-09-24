@@ -27,6 +27,7 @@ import LinkedInIcon from '@/assets/icons/LinkedInIcon.vue';
 footer {
     display: flex;
     gap: 15px;
+    width: min-content;
 }
 
 a {

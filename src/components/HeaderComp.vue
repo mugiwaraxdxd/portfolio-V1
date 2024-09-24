@@ -234,9 +234,14 @@ a:hover span {
 }
 
 @media (max-width: 390px) {
+  h1{
+    font-size: 34px;
+  }
+}
+@media (max-width: 350px) {
   .lang {
-    top: 160px;
-    right: 20px;
+    top: 208px;
+    right: 0px;
   }
 }
 </style>
