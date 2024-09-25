@@ -90,7 +90,7 @@ const unactive = () => {
 
 <style scoped>
 section {
-    padding: 56px 0 56px 0;
+    
 }
 
 .section-title {

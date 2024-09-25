@@ -1,3 +1,4 @@
+
 export const messages = {
     en: {
         headerComp: {
@@ -27,6 +28,9 @@ export const messages = {
             A: 'A+ is a practice project designed as an adaptive landing page, created using only HTML and CSS. It features a prominent banner, service sections, an image gallery, and a contact form. The page is optimized to provide a smooth experience on both mobile devices and desktop.',
             malecon: 'This landing page, MALECON 663, was developed as a practical exercise using only HTML and CSS. It features a responsive design that includes a main banner, a services section, an image gallery, and a contact form, ensuring a smooth browsing experience on both mobile devices and desktop.',
             title: 'PROJECTS'
+        },
+        footerComp: {
+            footer: 'Design inspired by Brittany Chiang and coded in Visual Studio Code by me. Built with Vue.js and CSS3, deployed with Vercel. All text is set in the Rubik typeface.'
         }
     },
     es: {
@@ -57,6 +61,9 @@ export const messages = {
             A: 'A+ es un proyecto de práctica diseñado como una landing page adaptable, creada usando solo HTML y CSS. Presenta un banner destacado, secciones de servicios, galería de imágenes, y un formulario de contacto. La página está optimizada para ofrecer una experiencia fluida tanto en dispositivos móviles como en escritorio.',
             malecon: 'Esta landing page, MALECON 663, se desarrolló como un ejercicio práctico utilizando únicamente HTML y CSS.Ofrece un diseño responsivo que incluye un banner principal, una sección de servicios, una galería de imágenes y un formulario de contacto, garantizando una experiencia de navegación fluida tanto en dispositivos móviles como en escritorio.',
             title: 'PROYECTOS'
+        },
+        footerComp: {
+            footer: "Diseño inspirado en <span class='span-footer'>Brittany Chiang</span> y codificado en <span class='span-footer'>Visual Studio Code</span> por mí. Desarrollado con <span class='span-footer'>Vue.js</span> y <span class='span-footer'>CSS3</span>, desplegado con <span class='span-footer'>Vercel</span>. Todo el texto utiliza la tipografía <span class='span-footer'>Rubik</span>."
         }
     }
 }

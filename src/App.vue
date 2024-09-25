@@ -4,7 +4,7 @@
     <div class="web">
       <div class="principal left">
         <Header />
-        <Footer class="footer" />
+        <Info class="footer" />
       </div>
       <Main class="principal" />
     </div>
@@ -13,7 +13,7 @@
 
 <script setup>
 import Header from "./components/HeaderComp.vue";
-import Footer from "./components/FooterComp.vue";
+import Info from "./components/InfoComp.vue";
 import Main from "./components/MainComp.vue";
 import { ref } from "vue";
 
@@ -31,12 +31,8 @@ const handleMouseMove = (event) => {
 :root {
   --font1: #E2E8F0;
   --font2: #808EA3;
+  --font3:#64748B;
   --blue: #64FFDA;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url(./assets/fonts/Inter-Regular.ttf);
 }
 
 @font-face {
@@ -155,6 +151,10 @@ p::selection, span::selection, h1::selection, h2::selection, h3::selection, a::s
 
 .span-about {
   font-weight: 500;
+  color: var(--font1);
+}
+
+.span-footer{
   color: var(--font1);
 }
 </style>
