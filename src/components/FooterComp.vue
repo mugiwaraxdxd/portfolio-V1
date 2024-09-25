@@ -1,17 +1,18 @@
 <template>
     <section>
         <footer>
-            <a target="_blank" href="https://x.com/mugiwara_xdxd?t=M4kitbRc0KcKw39DEdNwFA&s=09">
+            <a title="Twitter/X" target="_blank" href="https://x.com/mugiwara_xdxd?t=M4kitbRc0KcKw39DEdNwFA&s=09">
                 <TwitterXIcon class="svg" />
             </a>
-            <a target="_blank" href="https://www.instagram.com/mugiwara_xdxd?utm_source=qr&igsh=MzNlNGNkZWQ4Mg==">
+            <a title="Instagram" target="_blank"
+                href="https://www.instagram.com/mugiwara_xdxd?utm_source=qr&igsh=MzNlNGNkZWQ4Mg==">
                 <InstagramIcon class="svg" />
             </a>
-            <a target="_blank" href="https://github.com/mugiwaraxdxd">
+            <a title="GitHub" target="_blank" href="https://github.com/mugiwaraxdxd">
                 <GithubIcon class="svg" />
             </a>
-            <a target="_blank"
-                href="https://www.linkedin.com/in/yamir-pedrera-b49a47325?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+            <a title="LinkedIn" target="_blank"
+                href="https://www.linkedin.com/in/yamir-pedrera-a5162732a/">
                 <LinkedInIcon class="svg" />
             </a>
         </footer>
@@ -47,10 +48,12 @@ a {
 a:hover .svg {
     fill: var(--font1);
 }
-.gmail{
+
+.gmail {
     margin-top: 20px;
 }
-.gmail a{
+
+.gmail a {
     font-size: 15px;
     color: var(--font2);
     text-decoration: none;
@@ -59,22 +62,25 @@ a:hover .svg {
     position: relative;
     transition: .2s ease;
 }
-.gmail a:hover{
+
+.gmail a:hover {
     color: var(--font1);
 }
+
 .gmail a::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0px;
-  height: 1px;
-  background-color: var(--blue);
-  transition: 0.2s ease;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0px;
+    height: 1px;
+    background-color: var(--blue);
+    transition: 0.2s ease;
 }
+
 .gmail a:hover::after {
-  width: 100%;
-  left: 0;
-  transform: none;
+    width: 100%;
+    left: 0;
+    transform: none;
 }
 </style>
