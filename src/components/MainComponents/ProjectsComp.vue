@@ -155,7 +155,7 @@ svg {
     background-color: #132E44;
     border-radius: 50px;
     font-size: 12px;
-    color: #64FFDA;
+    color: var(--blue);
 }
 
 h3 {
@@ -180,7 +180,7 @@ a {
 }
 
 a:hover svg {
-    fill: #64FFDA;
+    fill: var(--blue);
     transform: translateY(-5px) translateX(5px);
 }
 
@@ -189,7 +189,7 @@ a:hover img {
 }
 
 a:hover h3 {
-    color: #64FFDA;
+    color: var(--blue);
 }
 
 

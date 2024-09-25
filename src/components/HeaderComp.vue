@@ -95,11 +95,11 @@ p {
 }
 
 .lang:hover {
-  border-color: #64FFDA;
+  border-color: var(--blue);
 }
 
 .lang:hover .circle {
-  fill: #64FFDA;
+  fill: var(--blue);
 }
 
 .header-text {
@@ -205,11 +205,11 @@ a:hover span {
   }
 
   .lang:active {
-    border-color: #64FFDA;
+    border-color: var(--blue);
   }
 
   .lang:active .circle {
-    fill: #64FFDA;
+    fill: var(--blue);
   }
 }
 

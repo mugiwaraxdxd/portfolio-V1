@@ -31,6 +31,7 @@ const handleMouseMove = (event) => {
 :root {
   --font1: #E2E8F0;
   --font2: #808EA3;
+  --blue: #64FFDA;
 }
 
 @font-face {
