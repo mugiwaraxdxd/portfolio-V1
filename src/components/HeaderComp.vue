@@ -3,7 +3,7 @@
     <section class="header-text">
       <h1>Yamir Pedrera</h1>
       <h2>{{ $t('headerComp.headerText.dev') }}</h2>
-      <p>{{ $t('headerComp.headerText.info') }}</p>
+      <p class="header-text-p">{{ $t('headerComp.headerText.info') }}</p>
     </section>
     <section class="header-links">
       <a :href="'#' + index" v-for="(section, index) in sections" :key="index"
@@ -122,7 +122,7 @@ h2 {
   margin-bottom: 20px;
 }
 
-.header-text p {
+.header-text-p {
   color: var(--font2);
   width: 50%;
   font-size: 16px;
@@ -233,15 +233,13 @@ a:hover span {
   }
 }
 
-@media (max-width: 390px) {
-  h1{
-    font-size: 34px;
+@media (max-width: 400px) {
+  .lang{
+    position: relative;
+    margin-top: 20px;
   }
-}
-@media (max-width: 350px) {
-  .lang {
-    top: 208px;
-    right: 0px;
+  .header-text-p{
+    font-size: 13px;
   }
 }
 </style>
