@@ -30,7 +30,7 @@ export const messages = {
             title: 'PROJECTS'
         },
         footerComp: {
-            footer: 'Design inspired by Brittany Chiang and coded in Visual Studio Code by me. Built with Vue.js and CSS3, deployed with Vercel. All text is set in the Rubik typeface.'
+            footer: "Design inspired by <span class='span-footer'>Brittany Chiang</span> and coded in <span class='span-footer'>Visual Studio Code</span> by me. Built with <span class='span-footer'>Vue.js</span> and <span class='span-footer'>CSS3</span>, deployed with <span class='span-footer'>Vercel</span>. All text is set in the <span class='span-footer'>Rubik</span> typeface."
         }
     },
     es: {
